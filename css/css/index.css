@@ -1,0 +1,80 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+p,.label,.value{
+    color: #fff;
+}
+.container{
+    max-width: 500px!important;
+    width: 100%;
+    padding: 30px 15px 0px 15px;
+    margin-top: 50px;
+    background: rgb(34,193,195);
+    background: linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(24,164,140,1) 100%);
+}
+.main{
+    text-align: center;
+}
+.section .row {
+    justify-content: center;
+}
+::placeholder { 
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+.main #search-input:focus::placeholder{
+    visibility: visible;
+    opacity: 1;
+    color: #000;
+}
+.main .search-bar i{
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    transform: translateX(-25px);
+    transition: 0.5s;
+}
+.main .search-bar i:hover{
+    color: #000;
+}
+.main #search-input{
+    border: none;
+    background: none;
+    border-bottom: 1px solid #fff;
+    transition: 1s;
+}
+.main #search-input:focus{
+    outline: none;
+    border-bottom: 1px solid #000;
+}
+.main .city-name{
+    margin-top: 60px;
+    font-size: 40px;
+}
+.main .temperature{
+    position: relative;
+    font-size: 90px;
+    display: inline;
+    width: 100%;
+    justify-content: center;
+}
+.main .temperature::before{
+    position: absolute;
+    content: "o";
+    font-size: 30px;
+    right: -15px;
+    top: 5px;
+}
+.section{
+    text-align: center;
+}
+.section .row:first-child{
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+}
+.section .item{
+    margin-bottom: 30px;
+}

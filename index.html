@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"
+  />
+    <link rel="stylesheet" href="./css/css/index.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="search-bar">
+                <input type="text" name="search-city" id="search-input" placeholder="Enter the city name...">
+                <i class="las la-search"></i>
+            </div>
+            <p class="city-name">Hà Nội</p>
+            <p class="weather">Mây mưa</p>
+            <div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather" class="img_weather">
+            </div>
+            <p class="temperature">30</p>
+        </div>
+        <div class="section">
+            <div class="row">
+                <div class="col-md-6 item">
+                    <div class="label ">Mặt trời mọc</div>
+                    <div class="value sunrise"></div>
+                </div>
+                <div class="col-md-6 item">
+                    <div class="label ">Mặt trời lặn</div>
+                    <div class="value time sundown"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 item">
+                    <div class="label">Độ ẩm</div>
+                    <div class="value humidity">94</div>
+                </div>
+                <div class="col-md-6 item">
+                    <div class="label">Gió</div>
+                    <div class="value wind">3.14</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/index.js"></script>
+<script src="./js/moment.js"></script>
+<script src="./js/jquery-3.5.1.min.js"></script>
+</html>
