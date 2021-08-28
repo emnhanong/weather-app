@@ -12,16 +12,18 @@ const wind = document.querySelector(".wind");
 const inputSearch = document.querySelector("#search-input");
 
 
-
 inputSearch.addEventListener("change", (e)=>{
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${e.target.value}&appid=${keyApi}&lang=vi`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${e.target.value}&appid=${keyApi}&lang=vi&units=metric`)
     .then(response => response.json())
     .then((data)=>{
         console.log(data);
         city.innerHTML = data.name || emptyData;
         weather.innerHTML = data.weather[0].description || emptyData;
         img_weather.setAttribute("src", `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
+
         temperature.innerHTML = Math.round(data.main.temp) || emptyData;
+
+
         sunrise.innerHTML = moment.unix(data.sys.sunrise).format("H:mm") || emptyData;
         sundown.innerHTML = moment.unix(data.sys.sunset).format("H:mm") || emptyData;
 
